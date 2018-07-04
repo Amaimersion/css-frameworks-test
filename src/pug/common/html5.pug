@@ -1,4 +1,14 @@
+block vars
+  - var title = "Test";
+
+
 block mixins
+  mixin css(href)
+    link(rel="stylesheet" href=href)&attributes(attributes)
+
+  mixin js(src)
+    script(defer src=src)&attributes(attributes)
+
   mixin a(href)
     a(href=href target="_blank")&attributes(attributes)
       block

@@ -1,0 +1,57 @@
+extends ../common/html5
+
+
+block append vars
+  - var title = "Test – Normalize";
+
+
+block append head
+  +css("libs/normalize.css")
+
+
+block append main
+  h1="H1"
+  a="Link"
+  <hr>
+  pre="Pre"
+  abbr(title="Хуй")="Ты"
+  p
+    strong="Strong"
+  p
+    b="b"
+  p
+    code="2147483647 << 1"
+  p
+    samp="-2"
+  p
+    kbd="&lt;Alt&gt;+&lt;Delete&gt;"
+  p
+    small="1"
+      small="2"
+        small="3"
+  p="2"
+    sub="3"
+  p="3"
+    sup="2"
+  p
+    img(src="assets/images/logo/normalize.svg")
+  fieldset
+    legend="Тест"
+    button="Click"
+    input
+    select
+     optgroup(label="Цвет настроения")
+      option(value="c")="Синий"
+  p
+    progress(max="100" value="40")
+  textarea(name="test", cols="30", rows="10")
+  p
+    input(type="checkbox")
+    input(type="radio")
+    input(type="number")
+    input(type="search")
+  details
+    summary="Some summary"
+    p="Some details"
+  template="Hidden template"
+  embed(src="sr.c" hidden="true")

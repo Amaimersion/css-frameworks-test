@@ -15,7 +15,9 @@
   },
   "license": "MIT",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  },
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.0",
     "css-loader": "^0.28.11",
@@ -26,6 +28,7 @@
     "pug-loader": "^2.4.0",
     "remove-files-webpack-plugin": "^1.0.0",
     "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
     "typescript": "^2.9.2",
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8"

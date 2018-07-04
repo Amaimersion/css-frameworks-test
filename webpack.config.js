@@ -5,7 +5,7 @@ const RemoveFilesWebpackPlugin = require('remove-files-webpack-plugin');
 
 module.exports = {
     entry: {
-        'index': './src/build/index.js'
+        index: './src/build/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist')
@@ -14,19 +14,18 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.s(c|a)ss$/,
+                test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
-
+                    MiniCssExtractPlugin.loader, 
+                    'css-loader'
                 ]
             },
             {
-                test: /\.css$/,
+                test: /\.s(c|a)ss$/,
                 use: [
-                    'style-loader',
-                    'css-loader'
+                    MiniCssExtractPlugin.loader, 
+                    'css-loader', 
+                    'sass-loader'
                 ]
             },
             {

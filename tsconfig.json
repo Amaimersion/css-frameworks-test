@@ -8,10 +8,6 @@
             "dom",
             "dom.iterable"
         ],
-        "baseUrl": "./",
-        "paths": {
-            "@modules/*": ["src/common/modules/*"]
-        },
         "alwaysStrict": true,
         "disableSizeLimit": true,
         "downlevelIteration": true,

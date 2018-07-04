@@ -1,6 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const RemoveFilesWebpackPlugin = require('remove-files-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -9,27 +10,16 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist')
     },
+    mode: 'development',
     module: {
         rules: [
             {
                 test: /\.s(c|a)ss$/,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            minimize: true,
-                            sourceMap: false
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: false
-                        }
-                    }
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader',
+
                 ]
             },
             {
@@ -42,14 +32,18 @@ module.exports = {
             }
         ]
     },
-    mode: 'development',
     plugins: [
+        new RemoveFilesWebpackPlugin({
+            before: {
+                root: __dirname,
+                include: ['dist']
+            }
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
         new HTMLWebpackPlugin({
-            title: 'Index',
-            filename: 'dist/index.html',
+            filename: 'index.html',
             template: './src/pug/index.pug'
         })
     ],

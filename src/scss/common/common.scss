@@ -1,0 +1,12 @@
+/* Vars. */
+
+// an elements for zero out margin and padding.
+$zero-out: (html, body, h1, p);
+
+
+/* Global. */
+
+#{$zero-out} {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,49 @@
+@import "../common/common";
+
+
+/* Vars. */
+
+$body-height: 100vh;
+$body-width: 100vw;
+
+$content-height: 8vh;
+$content-width: 10vw;
+
+
+/* Global. */
+
+html,
+body {
+  max-height: $body-height;
+  min-height: $body-height;
+  max-width: $body-width;
+  min-width: $body-width;
+}
+
+body {
+  background: (
+    linear-gradient(120deg, rgba(255, 0, 0, .7), rgba(255, 0, 0, 0) 75%),
+    linear-gradient(240deg, rgba(0, 0, 255, .7), rgba(0, 0, 255, 0) 75%),
+    linear-gradient(0deg, rgba(0, 255, 0, .7), rgba(0, 255, 0, 0) 75%)
+  );
+
+  //background: linear-gradient(0.57turn, #3F87A6, #EBF8e1, #F69D3C);
+}
+
+
+/* Main. */
+
+.custom-main-center {
+  padding: (50vh - $content-height / 2) (50vw - $content-width / 2);
+}
+
+.custom-content {
+  height: $content-height;
+  width: $content-width;
+  //line-height: $content-height;
+  text-align: center;
+
+  img {
+    height: $content-height;
+  }
+}

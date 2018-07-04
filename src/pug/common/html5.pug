@@ -1,0 +1,20 @@
+block mixins
+  mixin a(href)
+    a(href=href target="_blank")&attributes(attributes)
+      block
+
+
+<!DOCTYPE html>
+html(lang="ru")
+
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+      title=title ? title : "Test"
+
+  body
+    block header
+    block main
+    block footer

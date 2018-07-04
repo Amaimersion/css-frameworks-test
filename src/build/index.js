@@ -16,7 +16,7 @@
  */
 
 // doesn't required, just a reminder.
-//import '@pug/index.pug';
+//import '@pug/index/index.pug';
 
-import '@scss/index.scss';
-import '@ts/index.ts';
+import '@scss/index/index.scss';
+//import '@ts/index/index.ts';

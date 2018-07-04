@@ -2,7 +2,9 @@
   "name": "css-frameworks-test",
   "version": "1.0.0",
   "description": "Tests of some CSS frameworks",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack"
+  },
   "author": {
     "name": "Sergey Kuznetsov",
     "url": "https://github.com/Amaimersion"
@@ -13,7 +15,18 @@
   },
   "license": "MIT",
   "private": true,
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "remove-files-webpack-plugin": "^1.0.0",
+    "sass-loader": "^7.0.3",
+    "typescript": "^2.9.2",
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8"
   }

@@ -1,0 +1,20 @@
+{
+  "name": "css-frameworks-test",
+  "version": "1.0.0",
+  "description": "Tests of some CSS frameworks",
+  "scripts": {},
+  "author": {
+    "name": "Sergey Kuznetsov",
+    "url": "https://github.com/Amaimersion"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amaimersion/css-frameworks-test.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
+  }
+}

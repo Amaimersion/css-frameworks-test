@@ -33,6 +33,18 @@ body {
 
 /* Main. */
 
+.custom-blackout,
+.custom-main-center {
+  position: absolute;
+}
+
+.custom-blackout {
+  height: $body-height;
+  width: $body-width;
+  z-index: -1;
+  background: rgba(0, 0, 0, .12);
+}
+
 .custom-main-center {
   padding: (50vh - $content-height / 2) (50vw - $content-width / 2);
 }

@@ -8,8 +8,10 @@ module.exports = {
     entry: {
         // libs.
         'libs/normalize': './src/build/libs/normalize.js',
+        'libs/materialize': './src/build/libs/materialize.js',
         // pages.
-        'index': './src/build/pages/index.js'
+        'index': './src/build/pages/index.js',
+        'materialize': './src/build/pages/materialize.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist')
@@ -66,6 +68,11 @@ module.exports = {
             template: './src/pug/normalize/normalize.pug',
             inject: false
         }),
+        new HTMLWebpackPlugin({
+            filename: 'materialize.html',
+            template: './src/pug/materialize/materialize.pug',
+            inject: false
+        })
     ],
     resolve: {
         alias: {
